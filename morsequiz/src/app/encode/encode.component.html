@@ -1,0 +1,10 @@
+<div>
+  <a routerLink="/decode">Go to Decode</a>
+  <div>
+    <input type="text" [(ngModel)]="this.encodeService.toEncode">
+  </div>
+  <div>
+    <input readonly [value]="this.encodeService.encoded">
+  </div>
+  <button (click)="this.encodeService.encode()" [disabled]="this.encodeService.invalidText()">Encode</button>
+</div>
